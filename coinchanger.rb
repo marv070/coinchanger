@@ -1,11 +1,15 @@
 def coinchanger(cents)
 	coins = {penny: 0, nickle: 0, dime: 0, quarter: 0}
 	coin_value = {quarter: 25, dime: 10, nickle: 5, penny: 1}
+	
+
 	coin_value.each do | coin, value|
-    if cents == value
-    coins[coin] += 1
+      while
+      	value <= cents
+      	coins[coin] += 1
+      	cents = cents - value
+      end
     end
-  end
  coins
 end
 
