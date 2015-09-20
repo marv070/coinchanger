@@ -58,6 +58,10 @@ def test_for_sixty_seven_cents
     coinchanger(67))
 end
 
+def test_for_100_cents
+	assert_equal({quarter:4, dime:0, nickle:0, penny:0},
+	coinchanger(100))
+end
 
 
 end
