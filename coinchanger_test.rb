@@ -4,7 +4,7 @@ require"minitest/autorun"
 class Coinchanger<Minitest::Test
 
 def test_one_cent
-	 assert_equal({penny: 1, nickle: 0, dime: 0, quarter: 0}, 
+	 assert_equal({quarter:0, dime:0, nickle:0, penny:1}, 
      coinchanger(1))
 end
 
@@ -21,7 +21,7 @@ end
 def test_twenty_five_cents
 	assert_equal({penny: 0, nickle: 0, dime: 0, quarter: 1},
 	coinchanger(25))
-end
+ end
 
 def test_for_six_cents
 	assert_equal({penny: 1, nickle: 1, dime: 0, quarter: 0}, 
@@ -53,5 +53,19 @@ assert_equal({quarter:3, dime:2, nickle:0, penny:4},
 	coinchanger(99))
 end
 
+def test_for_sixty_seven_cents
+	assert_equal({quarter:2, dime:1, nickle:1, penny:2},
+    coinchanger(67))
+end
+
+
 
 end
+
+
+
+
+
+
+
+
