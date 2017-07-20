@@ -4,6 +4,8 @@ def coinchanger(cents)
 	
 
 	coin_value.each do | coin, value|
+   p "coin var is #{coin}"
+   p "value var is #{value}"
       while
       	value <= cents
       	coins[coin] += 1
